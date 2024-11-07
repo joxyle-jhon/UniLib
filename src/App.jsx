@@ -1,16 +1,38 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/custom/header/Header";
+import { BrowserRouter, Routes } from "react-router-dom";
+import { Route } from "lucide-react";
+import Dashboard from "./components/custom/dashboard/Dashboard";
+import ProtectedRoute from "./components/custom/protected-route/ProtectedRoute";
+import AddBook from "./components/custom/add-book/AddBook";
+import AddStudent from "./components/custom/add-student/AddStudent";
+import Analytics from "./components/custom/analytics/Analytics";
+import Chart from "./components/custom/chart/Chart";
+import ReturnBook from "./components/custom/return-book/ReturnBook";
+import StudentList from "./components/custom/student-list/StudentList";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+    <Header />
       <Routes>
-        <Route path="/" element={<h2>Welcome to the Library Management System</h2>} />
+        <Route path="" element={<Navigate to="/dashboard" />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/addBook" element={<AddBook />} />
+          <Route path="/addStudent" element={<AddStudent />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/chart" element={<Chart />} />
+          <Route path="/returnBook" element={<ReturnBook />} />
+          <Route path="/studentList" element={<StudentList />} />
+          <Route path="/issueBook" element={<IssueBook />} />
+          <Route path="*" element={<Navigate to="/" />} />
+
+
+        </Route>
       </Routes>
     </BrowserRouter>
-  );
+  )
 };
 
 export default App;
