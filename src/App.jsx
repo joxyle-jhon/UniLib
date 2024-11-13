@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/custom/header/Header";
-import { BrowserRouter, Routes } from "react-router-dom";
-import { Route } from "lucide-react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./components/custom/dashboard/Dashboard";
 import ProtectedRoute from "./components/custom/protected-route/ProtectedRoute";
 import AddBook from "./components/custom/add-book/AddBook";
@@ -10,13 +9,15 @@ import Analytics from "./components/custom/analytics/Analytics";
 import Chart from "./components/custom/chart/Chart";
 import ReturnBook from "./components/custom/return-book/ReturnBook";
 import StudentList from "./components/custom/student-list/StudentList";
+import IssueBook from "./components/custom/issue-book/IssueBook";
+
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Header />
+    <Header/>
       <Routes>
-        <Route path="" element={<Navigate to="/dashboard" />} />
+        <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/addBook" element={<AddBook />} />
