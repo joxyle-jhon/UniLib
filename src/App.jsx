@@ -10,10 +10,22 @@ import Chart from "./components/custom/chart/Chart";
 import ReturnBook from "./components/custom/return-book/ReturnBook";
 import StudentList from "./components/custom/student-list/StudentList";
 import IssueBook from "./components/custom/issue-book/IssueBook";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
+
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 10 * 1000,
+    },
+  },
+});
 
 const App = () => {
   return (
+    <QueryClientProvider client={queryClient}>
     <BrowserRouter>
     <Header/>
       <Routes>
@@ -33,7 +45,9 @@ const App = () => {
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+    <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
 };
 
 export default App;

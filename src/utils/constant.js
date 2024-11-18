@@ -12,6 +12,10 @@ export const menuItems = [
     path: "/studentist",
   },
   {
+    title: "Add Student",
+    path: "/addStudent",
+  },
+  {
     title: "Issue Book",
     path: "/issueBook",
   },
@@ -26,5 +30,9 @@ export const menuItems = [
   {
     title: "Book Chart",
     path: "/chart",
+  },
+  {
+    title: "Logout",
+    path: "",
   },
 ];
