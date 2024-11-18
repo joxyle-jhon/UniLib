@@ -25,7 +25,7 @@ Start by cloning the repository to your local machine:
 git clone <repository-url>
 cd <project-directory>
 ```
-2. Install Dependencies
+###2. Install Dependencies
 Navigate to the project directory and install required dependencies using either npm or yarn.
 
 Using npm:
@@ -33,7 +33,7 @@ Using npm:
 npm install
 ```
 
-3. Install Additional Packages
+****3. Install Additional Packages
 You will need to install the following libraries:
 
 React Query for managing and caching API requests.
