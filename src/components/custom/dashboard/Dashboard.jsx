@@ -54,7 +54,7 @@ const Dashboard = () => {
 
           <div
           className="ag-theme-quartz" // applying the Data Grid theme
-          style={{ height: 500, width:1190}} // the Data Grid will fill the size of the parent container
+          style={{ height: 500, width:1000}} // the Data Grid will fill the size of the parent container
           >
           <AgGridReact 
             rowData={books} 
