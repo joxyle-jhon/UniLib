@@ -22,8 +22,8 @@ Before starting, ensure you have the following tools installed:
 Start by cloning the repository to your local machine:
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/joxyle-jhon/UniLib.git
+cd UniLib
 ```
 ### 2. Install Dependencies
 Navigate to the project directory and install required dependencies using either npm or yarn.
