@@ -1,4 +1,4 @@
-#UniLIB
+#UniLib: USTP Based Library Development
 
 # Book Dashboard Setup Guide
 
@@ -21,7 +21,7 @@ Before starting, ensure you have the following tools installed:
 
 Start by cloning the repository to your local machine:
 
-```bash
+```bash 
 git clone https://github.com/joxyle-jhon/UniLib.git
 cd UniLib
 ```
